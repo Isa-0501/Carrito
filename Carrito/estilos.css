@@ -1,0 +1,104 @@
+.fondo{
+    background-image: url(./Images/fondo.png);
+    background-size: cover;
+    width: 1000px;
+    height: 1080px;
+    position: relative;
+    display: flex;
+}
+
+.fondo_mover{
+    animation: fondo-animacion 15s linear infinite;
+}
+
+@keyframes fondo-animacion{
+    100%{
+        background-position-x: -10000px;
+    }
+}
+
+.polvo{
+    background: url(./Images/polvo.png);
+    background-repeat: no-repeat;
+    height: 7rem;
+    width: 4.5rem;
+    position: absolute;
+    margin-top: 61rem;
+    margin-left: 14rem;
+    animation: polvo-animado 0.5s infinite steps(3);
+}
+
+.oculto{
+    display: none;
+}
+
+@keyframes polvo-animado{
+    100%{
+        background-position-x: 65px;
+    }
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.carro{
+    margin: auto;
+    height: 15rem;
+    position: relative;
+    margin-top: 47rem;
+}
+
+.carro_mover{
+    animation: salto-carro 1s linear infinite alternate;
+}
+
+@keyframes salto-carro{
+    100%{
+        transform: translateY(10px);
+    }
+}
+
+.llantauno{
+    height: 11rem;
+    position: absolute;
+    margin-top: 54rem;
+    margin-left: 18rem;
+}
+
+.llantados{
+    height: 11rem;
+    position: absolute;
+    margin-top: 54rem;
+    margin-left: 35rem;
+}
+
+.llantas_mover{
+    animation: llantas-animadas 4s linear infinite;
+    animation: llantas-animadas 4s linear infinite;
+}
+
+@keyframes llantas-animadas{
+    100%{
+        transform: rotate(360deg);  
+    }
+}
+
+.luz{
+    height: 7rem;
+    position: absolute;
+    margin-top: 49rem;
+    margin-left: 42rem;
+    animation: salto-carro 1s linear infinite alternate;
+    animation: luz-animacion 1s linear infinite alternate;
+}
+
+@keyframes luz-animacion{
+    100%{
+        opacity: 100%;
+    }
+    0%{
+        opacity: 0%;
+    }
+}
